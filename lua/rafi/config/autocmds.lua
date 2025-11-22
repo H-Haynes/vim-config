@@ -2,6 +2,8 @@
 -- https://github.com/rafi/vim-config
 -- ===
 
+
+
 -- This file is automatically loaded by lua/rafi/config/lazy.lua
 -- Extends $XDG_DATA_HOME/nvim/lazy/LazyVim/lua/lazyvim/config/autocmds.lua
 
@@ -113,3 +115,5 @@ vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufReadPre' }, {
 		vim.opt_global.writebackup = false
 	end,
 })
+
+

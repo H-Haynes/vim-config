@@ -11,9 +11,8 @@ return {
 	{
 		'nvim-lspconfig',
 		-- stylua: ignore
-		opts = function()
-			local keys = require('lazyvim.plugins.lsp.keymaps').get()
-			vim.list_extend(keys, {
+		opts = {
+			keys = {
 				{ '<leader>cl', false },
 				{ '<c-k>', false, mode = 'i' },
 				{ '<leader>cli', vim.lsp.buf.incoming_calls, desc = 'Incoming calls' },
@@ -21,8 +20,8 @@ return {
 				{ '<leader>fwa', vim.lsp.buf.add_workspace_folder, desc = 'Show Workspace Folders' },
 				{ '<leader>fwr', vim.lsp.buf.remove_workspace_folder, desc = 'Remove Workspace Folder' },
 				{ '<leader>fwl', '<cmd>lua =vim.lsp.buf.list_workspace_folders()<CR>', desc = 'List Workspace Folders' },
-			})
-		end,
+			},
+		},
 	},
 
 	-----------------------------------------------------------------------------

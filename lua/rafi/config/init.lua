@@ -1,8 +1,13 @@
+
 -- Rafi's Neovim config loader
 -- https://github.com/rafi/vim-config
 
 -- This uses LazyVim's config module.
 -- See $XDG_DATA_HOME/nvim/lazy/LazyVim/lua/lazyvim/config/init.lua
+
+
+
+
 
 local M = {}
 

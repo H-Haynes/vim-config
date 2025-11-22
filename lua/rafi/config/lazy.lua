@@ -154,7 +154,7 @@ require('lazy').setup(vim.tbl_extend('keep', user_lazy_opts, {
 				'zipPlugin',
 			},
 		},
-	},
+	}
 }))
 
 -- Enjoy!

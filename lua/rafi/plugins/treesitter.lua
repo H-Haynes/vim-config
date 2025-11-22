@@ -58,9 +58,20 @@ return {
 				opts.ensure_installed = LazyVim.dedup(opts.ensure_installed)
 			end
 			if not has_git then
-				require('nvim-treesitter.install').ensure_installed = function() end
+				local install = require('nvim-treesitter.install')
+				if install then
+					install.ensure_installed = function() end
+				end
 			end
-			require('nvim-treesitter.configs').setup(opts)
+			-- Try new API (main branch) first, fallback to old API (master branch) for compatibility
+			local ok, treesitter = pcall(require, 'nvim-treesitter')
+			if ok and treesitter and treesitter.setup then
+				-- New API for main branch
+				treesitter.setup(opts)
+			else
+				-- Old API for master branch
+				require('nvim-treesitter.configs').setup(opts)
+			end
 		end,
 		---@type TSConfig
 		---@diagnostic disable: missing-fields
