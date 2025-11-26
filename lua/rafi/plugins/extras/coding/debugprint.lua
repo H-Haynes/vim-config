@@ -6,12 +6,12 @@ return {
 		version = '*', -- Remove if you DON'T want to use the stable version
 		cmd = { 'ToggleCommentDebugPrints', 'DeleteDebugPrints' },
 		keys = {
-			{ 'g?o', desc = 'Debug via text-obj below' },
-			{ 'g?O', desc = 'Debug via text-obj above' },
-			{ 'g?v', desc = 'Debug variable below' },
-			{ 'g?V', desc = 'Debug variable above' },
-			{ 'g?p', desc = 'Debug plain below' },
-			{ 'g?P', desc = 'Debug plain above' },
+			{ 'g?o', desc = '在下方通过文本对象调试' },
+			{ 'g?O', desc = '在上方通过文本对象调试' },
+			{ 'g?v', desc = '在下方调试变量' },
+			{ 'g?V', desc = '在上方调试变量' },
+			{ 'g?p', desc = '在下方调试普通文本' },
+			{ 'g?P', desc = '在上方调试普通文本' },
 		},
 		opts = {
 			keymaps = {

@@ -21,7 +21,7 @@ M.show = function()
 		vim.notify(
 			'You must be running Neovim ≥9.0',
 			vim.log.levels.WARN,
-			{ title = 'Contextmenu' }
+			{ title = '上下文菜单' }
 		)
 		return
 	end

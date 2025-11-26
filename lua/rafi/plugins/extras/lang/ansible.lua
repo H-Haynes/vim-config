@@ -20,7 +20,7 @@ LazyVim.on_very_lazy(function()
 end)
 
 return {
-	desc = 'Imports Ansible lang extras and adds more tools.',
+	desc = '引入 Ansible 语言扩展并提供更多工具。',
 	recommended = function()
 		return LazyVim.extras.wants({
 			ft = 'yaml.ansible',

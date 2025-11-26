@@ -13,7 +13,7 @@ LazyVim.on_very_lazy(function()
 end)
 
 return {
-	desc = 'Imports Python lang extras with more patterns and syntaxs.',
+	desc = '引入 Python 语言扩展并补充更多语法与模板。',
 	recommended = function()
 		return LazyVim.extras.wants({
 			ft = 'python',

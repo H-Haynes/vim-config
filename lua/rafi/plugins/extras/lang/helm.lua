@@ -11,7 +11,7 @@ LazyVim.on_very_lazy(function()
 end)
 
 return {
-	desc = 'Helm lang extras, common patterns, without towolf/vim-helm.',
+	desc = '引入 Helm 语言扩展与常用模板，移除 towolf/vim-helm。',
 	recommended = function()
 		return LazyVim.extras.wants({
 			ft = 'helm',

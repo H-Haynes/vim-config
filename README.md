@@ -143,7 +143,7 @@ Enjoy! :smile:
 
 Use `:Mason` (or <kbd>Space</kbd>+<kbd>cm</kbd>) to install and manage LSP
 servers, DAP servers, linters and formatters. See `:h mason.nvim` and
-[williamboman/mason.nvim] for more information.
+[mason-org/mason.nvim] for more information.
 
 ### Language-Server Protocol (LSP)
 
@@ -154,7 +154,7 @@ for the official list, and the [Language server mapping](https://github.com/will
 list. You can also view at `:h mason-lspconfig-server-map`
 
 You'll need utilities like `npm` and `curl` to install some extensions, see
-[requirements](https://github.com/williamboman/mason.nvim#requirements)
+[requirements](https://github.com/mason-org/mason.nvim#requirements)
 (or `:h mason-requirements`) for more information.
 
 See [lua/rafi/plugins/lsp/init.lua] for custom key-mappings and configuration
@@ -446,7 +446,7 @@ _Note_ that 95% of the plugins are **lazy-loaded**.
 | Name                                | Description                                       |
 | ----------------------------------- | ------------------------------------------------- |
 | [neovim/nvim-lspconfig]             | Quickstart configurations for the Nvim LSP client |
-| [williamboman/mason.nvim]           | Portable package manager for Neovim               |
+| [mason-org/mason.nvim]              | Portable package manager for Neovim               |
 | [williamboman/mason-lspconfig.nvim] | Mason extension for easier lspconfig integration  |
 | [stevearc/conform.nvim]             | Lightweight yet powerful formatter plugin         |
 | [mfussenegger/nvim-lint]            | Asynchronous linter plugin                        |
@@ -547,7 +547,7 @@ _Note_ that 95% of the plugins are **lazy-loaded**.
 | [t9md/vim-quickhl]                    | Highlight words quickly                                 |
 
 [neovim/nvim-lspconfig]: https://github.com/neovim/nvim-lspconfig
-[williamboman/mason.nvim]: https://github.com/williamboman/mason.nvim
+[mason-org/mason.nvim]: https://github.com/mason-org/mason.nvim
 [williamboman/mason-lspconfig.nvim]: https://github.com/williamboman/mason-lspconfig.nvim
 [stevearc/conform.nvim]: https://github.com/stevearc/conform.nvim
 [mfussenegger/nvim-lint]: https://github.com/mfussenegger/nvim-lint
@@ -639,7 +639,7 @@ Spec: `rafi.plugins.extras.coding.<name>`
 
 | Name             | Repository                      | Description                                            |
 | ---------------- | ------------------------------- | ------------------------------------------------------ |
-| `align`          | [echasnovski/mini.align]        | Align text interactively                               |
+| `align`          | [nvim-mini/mini.align]          | Align text interactively                               |
 | `chainsaw`       | [chrisgrieser/nvim-chainsaw]    | Create log statements on the fly                       |
 | `debugprint.lua` | [andrewferrier/debugprint.nvim] | Easily add debug print lines                           |
 | `editorconfig`   | [sgur/vim-editorconfig]         | EditorConfig plugin written entirely in Vimscript      |
@@ -647,7 +647,7 @@ Spec: `rafi.plugins.extras.coding.<name>`
 | `nvim-cmp`       | [hrsh7th/nvim-cmp]              | Completion plugin                                      |
 | `sandwich`       | [machakann/vim-sandwich]        | Search, select, and edit sandwich text objects         |
 
-[echasnovski/mini.align]: https://github.com/echasnovski/mini.align
+[nvim-mini/mini.align]: https://github.com/nvim-mini/mini.align
 [chrisgrieser/nvim-chainsaw]: https://github.com/chrisgrieser/nvim-chainsaw
 [andrewferrier/debugprint.nvim]: https://github.com/andrewferrier/debugprint.nvim
 [sgur/vim-editorconfig]: https://github.com/sgur/vim-editorconfig
@@ -682,7 +682,7 @@ Spec: `rafi.plugins.extras.editor.<name>`
 | `anyjump`     | [pechorin/any-jump.vim]     | Jump to any definition and references without overhead |
 | `flybuf`      | [glepnir/flybuf.nvim]       | List buffers in a float window                         |
 | `harpoon2`    | [ThePrimeagen/harpoon]      | Marks for navigating your project                      |
-| `mini-visits` | [echasnovski/mini.visits]   | Track and reuse file system visits                     |
+| `mini-visits` | [nvim-mini/mini.visits]     | Track and reuse file system visits                     |
 | `rest`        | [rest-nvim/rest.nvim]       | Fast Neovim http client written in Lua                 |
 | `sidebar`     | [sidebar-nvim/sidebar.nvim] | Generic and modular lua sidebar                        |
 | `spectre`     | [nvim-pack/nvim-spectre]    | Find and replace                                       |
@@ -691,7 +691,7 @@ Spec: `rafi.plugins.extras.editor.<name>`
 [pechorin/any-jump.vim]: https://github.com/pechorin/any-jump.vim
 [glepnir/flybuf.nvim]: https://github.com/glepnir/flybuf.nvim
 [ThePrimeagen/harpoon]: https://github.com/ThePrimeagen/harpoon
-[echasnovski/mini.visits]: https://github.com/echasnovski/mini.visits
+[nvim-mini/mini.visits]: https://github.com/nvim-mini/mini.visits
 [rest-nvim/rest.nvim]: https://github.com/rest-nvim/rest.nvim
 [sidebar-nvim/sidebar.nvim]: https://github.com/sidebar-nvim/sidebar.nvim
 [nvim-pack/nvim-spectre]: https://github.com/nvim-pack/nvim-spectre
@@ -793,8 +793,8 @@ Spec: `rafi.plugins.extras.ui.<name>`
 | `illuminate`      | [RRethy/vim-illuminate]         | Highlights other uses of the word under the cursor            |
 | `incline`         | [b0o/incline.nvim]              | Floating statuslines                                          |
 | `marks`           | [chentoast/marks.nvim]          | Interacting with and manipulating marks                       |
-| `mini-clue`       | [echasnovski/mini.clue]         | Show next key clues                                           |
-| `mini-map`        | [echasnovski/mini.map]          | Window with buffer text overview, scrollbar and highlights    |
+| `mini-clue`       | [nvim-mini/mini.clue]           | Show next key clues                                           |
+| `mini-map`        | [nvim-mini/mini.map]            | Window with buffer text overview, scrollbar and highlights    |
 | `quicker`         | [stevearc/quicker.nvim]         | Improved quickfix UI and workflow                             |
 | `symbols-outline` | [simrat39/symbols-outline.nvim] | Tree like view for symbols using LSP                          |
 
@@ -811,8 +811,8 @@ Spec: `rafi.plugins.extras.ui.<name>`
 [RRethy/vim-illuminate]: https://github.com/RRethy/vim-illuminate
 [b0o/incline.nvim]: https://github.com/b0o/incline.nvim
 [chentoast/marks.nvim]: https://github.com/chentoast/marks.nvim
-[echasnovski/mini.clue]: https://github.com/echasnovski/mini.clue
-[echasnovski/mini.map]: https://github.com/echasnovski/mini.map
+[nvim-mini/mini.clue]: https://github.com/nvim-mini/mini.clue
+[nvim-mini/mini.map]: https://github.com/nvim-mini/mini.map
 [stevearc/quicker.nvim]: https://github.com/stevearc/quicker.nvim
 [simrat39/symbols-outline.nvim]: https://github.com/simrat39/symbols-outline.nvim
 

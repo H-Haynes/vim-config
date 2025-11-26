@@ -5,10 +5,10 @@ return {
 		'pechorin/any-jump.vim',
 		cmd = { 'AnyJump', 'AnyJumpVisual' },
 		keys = {
-			{ '<leader>ii', '<cmd>AnyJump<CR>', desc = 'Any Jump' },
-			{ '<leader>ii', '<cmd>AnyJumpVisual<CR>', mode = 'x', desc = 'Any Jump' },
-			{ '<leader>ib', '<cmd>AnyJumpBack<CR>', desc = 'Any Jump Back' },
-			{ '<leader>il', '<cmd>AnyJumpLastResults<CR>', desc = 'Any Jump Resume' },
+			{ '<leader>ii', '<cmd>AnyJump<CR>', desc = '任意跳转' },
+			{ '<leader>ii', '<cmd>AnyJumpVisual<CR>', mode = 'x', desc = '任意跳转' },
+			{ '<leader>ib', '<cmd>AnyJumpBack<CR>', desc = '任意跳转返回' },
+			{ '<leader>il', '<cmd>AnyJumpLastResults<CR>', desc = '任意跳转恢复' },
 		},
 		init = function()
 			vim.g.any_jump_disable_default_keybindings = 1

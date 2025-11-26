@@ -8,10 +8,10 @@ return {
 		'serenevoid/kiwi.nvim',
 		-- stylua: ignore
 		keys = {
-			{ '<leader>zo', function() require('kiwi').open_wiki_index() end, desc = 'Open wiki' },
-			{ '<leader>zd', function() require('kiwi').open_diary_index() end, desc = 'Diary index' },
-			{ '<leader>zn', function() require('kiwi').open_diary_new() end, desc = 'Diary new' },
-			{ '<leader>zx', function() require('kiwi').todo.toggle() end, desc = 'Toggle todo' },
+			{ '<leader>zo', function() require('kiwi').open_wiki_index() end, desc = '打开维基' },
+			{ '<leader>zd', function() require('kiwi').open_diary_index() end, desc = '日记索引' },
+			{ '<leader>zn', function() require('kiwi').open_diary_new() end, desc = '新建日记' },
+			{ '<leader>zx', function() require('kiwi').todo.toggle() end, desc = '切换待办' },
 		},
 	},
 }

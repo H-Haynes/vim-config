@@ -20,7 +20,7 @@ local function link_surround()
 			cscol, cecol = cecol, cscol
 		end
 		if csrow ~= cerow then
-			vim.notify('Cannot link across lines', vim.log.levels.ERROR)
+			vim.notify('无法跨行创建链接', vim.log.levels.ERROR)
 			return
 		end
 		idx = cscol - 1
@@ -29,7 +29,7 @@ local function link_surround()
 		local esc = vim.api.nvim_replace_termcodes('<Esc>', true, false, true)
 		vim.api.nvim_feedkeys(esc, 'x', true)
 	else
-		vim.notify('Cannot link across lines', vim.log.levels.ERROR)
+		vim.notify('无法跨行创建链接', vim.log.levels.ERROR)
 		return
 	end
 

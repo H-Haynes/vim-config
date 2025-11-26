@@ -21,59 +21,59 @@ end
 -- Picker {{{
 
 -- Bind localleader to common LazyVim picker (telescope/fzf/snacks) keymaps.
-map('n', '<localleader>r', '<leader>sR', { remap = true, desc = 'Resume Last' })
-map('n', '<localleader>f', '<leader>ff', { remap = true, desc = 'Find Files (Root Dir)' })
-map('n', '<localleader>F', '<leader>fF', { remap = true, desc = 'Find Files (cwd)' })
-map('n', '<localleader>g', '<leader>sg', { remap = true, desc = 'Grep (Root Dir)' })
-map('n', '<localleader>G', '<leader>sG', { remap = true, desc = 'Grep (cwd)' })
-map('n', '<localleader>b', '<leader>,',  { remap = true, desc = 'Switch Buffer' })
-map('n', '<localleader>B', '<leader>sB', { remap = true, desc = 'Grep open buffers' })
-map('n', '<localleader>l', '<leader>sb', { remap = true, desc = 'Buffer lines' })
-map('n', '<localleader>h', '<leader>sh', { remap = true, desc = 'Help Pages' })
-map('n', '<localleader>H', '<leader>sH', { remap = true, desc = 'Search Highlight Groups' })
-map('n', '<localleader>j', '<leader>sj', { remap = true, desc = 'Jumplist' })
-map('n', '<localleader>m', '<leader>sm', { remap = true, desc = 'Jump to Mark' })
-map('n', '<localleader>M', '<leader>sM', { remap = true, desc = 'Man Pages' })
-map('n', '<localleader>o', '<leader>so', { remap = true, desc = 'Options' })
-map('n', '<localleader>t', '<leader>ss', { remap = true, desc = 'Goto Symbol' })
-map('n', '<localleader>T', '<leader>sS', { remap = true, desc = 'Goto Symbol (Workspace)' })
-map('n', '<localleader>v', '<leader>s"', { remap = true, desc = 'Registers' })
-map('n', '<localleader>s', '<leader>qS', { remap = true, desc = 'Sessions' })
-map('n', '<localleader>x', '<leader>fr', { remap = true, desc = 'Recent' })
-map('n', '<localleader>X', '<leader>fR', { remap = true, desc = 'Recent (cwd)' })
-map('n', '<localleader>;', '<leader>sc', { remap = true, desc = 'Command History' })
-map('n', '<localleader>:', '<leader>sC', { remap = true, desc = 'Commands' })
-map('n', '<localleader>p', '<leader>fp', { remap = true, desc = 'Projects' })
-map({ 'n', 'x' }, '<leader>gg', '<leader>sw', { remap = true, desc = 'Visual selection or word (Root Dir)' })
-map({ 'n', 'x' }, '<leader>gG', '<leader>sW', { remap = true, desc = 'Visual selection or word (cwd)' })
+map('n', '<localleader>r', '<leader>sR', { remap = true, desc = '恢复上次' })
+map('n', '<localleader>f', '<leader>ff', { remap = true, desc = '查找文件（根目录）' })
+map('n', '<localleader>F', '<leader>fF', { remap = true, desc = '查找文件（当前目录）' })
+map('n', '<localleader>g', '<leader>sg', { remap = true, desc = '全局搜索（根目录）' })
+map('n', '<localleader>G', '<leader>sG', { remap = true, desc = '全局搜索（当前目录）' })
+map('n', '<localleader>b', '<leader>,',  { remap = true, desc = '切换缓冲区' })
+map('n', '<localleader>B', '<leader>sB', { remap = true, desc = '搜索已打开的缓冲区' })
+map('n', '<localleader>l', '<leader>sb', { remap = true, desc = '搜索当前缓冲区行' })
+map('n', '<localleader>h', '<leader>sh', { remap = true, desc = '帮助文档' })
+map('n', '<localleader>H', '<leader>sH', { remap = true, desc = '搜索高亮组' })
+map('n', '<localleader>j', '<leader>sj', { remap = true, desc = '跳转列表' })
+map('n', '<localleader>m', '<leader>sm', { remap = true, desc = '跳转到标记' })
+map('n', '<localleader>M', '<leader>sM', { remap = true, desc = 'Man 文档' })
+map('n', '<localleader>o', '<leader>so', { remap = true, desc = '选项' })
+map('n', '<localleader>t', '<leader>ss', { remap = true, desc = '跳转符号' })
+map('n', '<localleader>T', '<leader>sS', { remap = true, desc = '跳转符号（工作区）' })
+map('n', '<localleader>v', '<leader>s"', { remap = true, desc = '寄存器' })
+map('n', '<localleader>s', '<leader>qS', { remap = true, desc = '会话' })
+map('n', '<localleader>x', '<leader>fr', { remap = true, desc = '最近文件' })
+map('n', '<localleader>X', '<leader>fR', { remap = true, desc = '最近文件（当前目录）' })
+map('n', '<localleader>;', '<leader>sc', { remap = true, desc = '命令历史' })
+map('n', '<localleader>:', '<leader>sC', { remap = true, desc = '命令' })
+map('n', '<localleader>p', '<leader>fp', { remap = true, desc = '项目' })
+map({ 'n', 'x' }, '<leader>gg', '<leader>sw', { remap = true, desc = '选区或单词（根目录）' })
+map({ 'n', 'x' }, '<leader>gG', '<leader>sW', { remap = true, desc = '选区或单词（当前目录）' })
 
 -- }}}
 -- Navigation {{{
 
 if vim.F.if_nil(vim.g.elite_mode, false) then
 	-- Elite-mode: Arrow-keys resize window
-	map('n', '<Up>', '<cmd>resize +1<cr>', { desc = 'Increase Window Height' })
-	map('n', '<Down>', '<cmd>resize -1<cr>', { desc = 'Decrease Window Height' })
-	map('n', '<Left>', '<cmd>vertical resize +1<cr>', { desc = 'Increase Window Width' })
-	map('n', '<Right>', '<cmd>vertical resize -1<cr>', { desc = 'Decrease Window Width' })
+	map('n', '<Up>', '<cmd>resize +1<cr>', { desc = '增加窗口高度' })
+	map('n', '<Down>', '<cmd>resize -1<cr>', { desc = '减少窗口高度' })
+	map('n', '<Left>', '<cmd>vertical resize +1<cr>', { desc = '增加窗口宽度' })
+	map('n', '<Right>', '<cmd>vertical resize -1<cr>', { desc = '减少窗口宽度' })
 	unmap('n', { '<C-Up>', '<C-Down>', '<C-Left>', '<C-Right>' })
 else
 	-- Moves through display-lines, unless count is provided
-	map({ 'n', 'x' }, '<Down>', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true, desc = 'Down' })
-	map({ 'n', 'x' }, '<Up>', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true, desc = 'Up' })
+	map({ 'n', 'x' }, '<Down>', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true, desc = '向下' })
+	map({ 'n', 'x' }, '<Up>', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true, desc = '向上' })
 
 	-- Resize window using <ctrl> arrow keys
-	map('n', '<C-Up>', '<cmd>resize +2<cr>', { desc = 'Increase Window Height' })
-	map('n', '<C-Down>', '<cmd>resize -2<cr>', { desc = 'Decrease Window Height' })
-	map('n', '<C-Left>', '<cmd>vertical resize -2<cr>', { desc = 'Decrease Window Width' })
-	map('n', '<C-Right>', '<cmd>vertical resize +2<cr>', { desc = 'Increase Window Width' })
+	map('n', '<C-Up>', '<cmd>resize +2<cr>', { desc = '增加窗口高度' })
+	map('n', '<C-Down>', '<cmd>resize -2<cr>', { desc = '减少窗口高度' })
+	map('n', '<C-Left>', '<cmd>vertical resize -2<cr>', { desc = '减少窗口宽度' })
+	map('n', '<C-Right>', '<cmd>vertical resize +2<cr>', { desc = '增加窗口宽度' })
 end
 
 unmap('n', { '<S-h>', '<S-l>' })
 
 -- Easier line-wise movement
-map('n', 'gh', 'g^', { desc = 'Jump to first screen character' })
-map('n', 'gl', 'g$', { desc = 'Jump to last screen character' })
+map('n', 'gh', 'g^', { desc = '跳至屏幕首字符' })
+map('n', 'gl', 'g$', { desc = '跳至屏幕尾字符' })
 
 -- Navigation in command line
 map('c', '<C-h>', '<Home>')
@@ -88,34 +88,34 @@ map('n', 'zh', 'z4h')
 -- Toggle fold or select option from popup menu
 map('n', '<CR>', function()
 	return vim.fn.pumvisible() == 1 and '<CR>' or 'za'
-end, { expr = true, desc = 'Toggle Fold' })
+end, { expr = true, desc = '切换折叠' })
 
 -- Focus the current fold by closing all others
-map('n', '<S-Return>', 'zMzv', { remap = true, desc = 'Focus Fold' })
+map('n', '<S-Return>', 'zMzv', { remap = true, desc = '聚焦折叠' })
 
 -- Tabs: Many ways to navigate them
-map('n', '<A-j>', '<cmd>tabnext<CR>', { desc = 'Next Tab' })
-map('n', '<A-k>', '<cmd>tabprevious<CR>', { desc = 'Previous Tab' })
-map('n', '<A-[>', '<cmd>tabprevious<CR>', { desc = 'Previous Tab' })
-map('n', '<A-]>', '<cmd>tabnext<CR>', { desc = 'Next Tab' })
-map('n', '<C-Tab>', '<cmd>tabnext<CR>', { desc = 'Next Tab' })
-map('n', '<C-S-Tab>', '<cmd>tabprevious<CR>', { desc = 'Previous Tab' })
+map('n', '<A-j>', '<cmd>tabnext<CR>', { desc = '下一个标签页' })
+map('n', '<A-k>', '<cmd>tabprevious<CR>', { desc = '上一个标签页' })
+map('n', '<A-[>', '<cmd>tabprevious<CR>', { desc = '上一个标签页' })
+map('n', '<A-]>', '<cmd>tabnext<CR>', { desc = '下一个标签页' })
+map('n', '<C-Tab>', '<cmd>tabnext<CR>', { desc = '下一个标签页' })
+map('n', '<C-S-Tab>', '<cmd>tabprevious<CR>', { desc = '上一个标签页' })
 
 -- Moving tabs
-map('n', '<A-{>', '<cmd>-tabmove<CR>', { desc = 'Tab Move Backwards' })
-map('n', '<A-}>', '<cmd>+tabmove<CR>', { desc = 'Tab Move Forwards' })
+map('n', '<A-{>', '<cmd>-tabmove<CR>', { desc = '标签左移' })
+map('n', '<A-}>', '<cmd>+tabmove<CR>', { desc = '标签右移' })
 
 -- }}}
 -- Selection {{{
 
-map('n', '<Leader><Leader>', 'V', { desc = 'Visual Mode' })
-map('x', '<Leader><Leader>', '<Esc>', { desc = 'Exit Visual Mode' })
+map('n', '<Leader><Leader>', 'V', { desc = '可视模式' })
+map('x', '<Leader><Leader>', '<Esc>', { desc = '退出可视模式' })
 
 -- Select last paste
-map('n', 'vsp', "'`['.strpart(getregtype(), 0, 1).'`]'", { expr = true, desc = 'Select Paste' })
+map('n', 'vsp', "'`['.strpart(getregtype(), 0, 1).'`]'", { expr = true, desc = '选择粘贴区域' })
 
 -- Quick substitute within selected area
-map('x', 'sg', ':s//gc<Left><Left><Left>', { desc = 'Substitute Within Selection' })
+map('x', 'sg', ':s//gc<Left><Left><Left>', { desc = '选区替换' })
 
 -- C-r: Easier search and replace visual/select mode
 map(
@@ -123,12 +123,12 @@ map(
 	'<C-r>',
 	":<C-u>%s/\\V<C-R>=v:lua.get_visual_selection()<CR>"
 		.. '//gc<Left><Left><Left>',
-	{ desc = 'Replace Selection' }
+	{ desc = '替换选区' }
 )
 
 -- Use tab for indenting in visual/select mode
-map('x', '<Tab>', '>', { remap = true, desc = 'Indent Left' })
-map('x', '<S-Tab>', '<', { remap = true, desc = 'Indent Right' })
+map('x', '<Tab>', '>', { remap = true, desc = '向右缩进' })
+map('x', '<S-Tab>', '<', { remap = true, desc = '向左缩进' })
 
 -- Better block-wise operations on selected area
 local blockwise_force = function(key)
@@ -142,19 +142,19 @@ local blockwise_force = function(key)
 		return keyseq[key][vim.fn.mode()]
 	end
 end
-map('x', 'I',  blockwise_force('I'),  { expr = true, noremap = true, desc = 'Blockwise Insert' })
-map('x', 'gI', blockwise_force('gI'), { expr = true, noremap = true, desc = 'Blockwise Insert' })
-map('x', 'A',  blockwise_force('A'),  { expr = true, noremap = true, desc = 'Blockwise Append' })
+map('x', 'I',  blockwise_force('I'),  { expr = true, noremap = true, desc = '块插入' })
+map('x', 'gI', blockwise_force('gI'), { expr = true, noremap = true, desc = '块插入' })
+map('x', 'A',  blockwise_force('A'),  { expr = true, noremap = true, desc = '块追加' })
 
 -- }}}
 -- Jump to {{{
 
-map('n', ']a', '<cmd>lnext<CR>', { desc = 'Next Loclist' })
-map('n', '[a', '<cmd>lprev<CR>', { desc = 'Previous Loclist' })
+map('n', ']a', '<cmd>lnext<CR>', { desc = '下一个位置列表' })
+map('n', '[a', '<cmd>lprev<CR>', { desc = '上一个位置列表' })
 
 -- Whitespace jump (see plugin/whitespace.vim)
-map('n', ']z', function() whitespace_jump(1) end, { desc = 'Next Whitespace' })
-map('n', '[z', function() whitespace_jump(-1) end, { desc = 'Previous Whitespace' })
+map('n', ']z', function() whitespace_jump(1) end, { desc = '下一个空白问题' })
+map('n', '[z', function() whitespace_jump(-1) end, { desc = '上一个空白问题' })
 
 -- Diagnostic movement
 local diagnostic_jump = function(count, severity)
@@ -171,67 +171,67 @@ local diagnostic_jump = function(count, severity)
 		jump({ severity = severity_int })
 	end
 end
-map('n', ']d', diagnostic_jump(1), { desc = 'Next Diagnostic' })
-map('n', '[d', diagnostic_jump(-1), { desc = 'Prev Diagnostic' })
-map('n', ']e', diagnostic_jump(1, 'ERROR'), { desc = 'Next Error' })
-map('n', '[e', diagnostic_jump(-1, 'ERROR'), { desc = 'Prev Error' })
-map('n', ']w', diagnostic_jump(1, 'WARN'), { desc = 'Next Warning' })
-map('n', '[w', diagnostic_jump(-1, 'WARN'), { desc = 'Prev Warning' })
+map('n', ']d', diagnostic_jump(1), { desc = '下一个诊断' })
+map('n', '[d', diagnostic_jump(-1), { desc = '上一个诊断' })
+map('n', ']e', diagnostic_jump(1, 'ERROR'), { desc = '下一个错误' })
+map('n', '[e', diagnostic_jump(-1, 'ERROR'), { desc = '上一个错误' })
+map('n', ']w', diagnostic_jump(1, 'WARN'), { desc = '下一个警告' })
+map('n', '[w', diagnostic_jump(-1, 'WARN'), { desc = '上一个警告' })
 
 -- }}}
 -- Clipboard {{{
 -- ===
 
 -- Paste in visual-mode without pushing to register
-map('x', 'p', 'p:let @+=@0<CR>:let @"=@0<CR>', { silent = true, desc = 'Paste' })
-map('x', 'P', 'P:let @+=@0<CR>:let @"=@0<CR>', { silent = true, desc = 'Paste In-place' })
+map('x', 'p', 'p:let @+=@0<CR>:let @"=@0<CR>', { silent = true, desc = '粘贴' })
+map('x', 'P', 'P:let @+=@0<CR>:let @"=@0<CR>', { silent = true, desc = '原位粘贴' })
 
 -- Yank buffer's relative path to clipboard
 map('n', '<Leader>y', function()
 	local path = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(0), ':~:.') or ''
 	vim.fn.setreg('+', path)
-	vim.notify(path, vim.log.levels.INFO, { title = 'Yanked relative path' })
-end, { silent = true, desc = 'Yank relative path' })
+	vim.notify(path, vim.log.levels.INFO, { title = '已复制相对路径' })
+end, { silent = true, desc = '复制相对路径' })
 
 -- Yank absolute path
 map('n', '<Leader>Y', function()
 	local path = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(0), ':p') or ''
 	vim.fn.setreg('+', path)
-	vim.notify(path, vim.log.levels.INFO, { title = 'Yanked absolute path' })
-end, { silent = true, desc = 'Yank absolute path' })
+	vim.notify(path, vim.log.levels.INFO, { title = '已复制绝对路径' })
+end, { silent = true, desc = '复制绝对路径' })
 
 -- }}}
 -- Coding {{{
 
 -- Comment
 unmap('n', { 'gra', 'gri', 'grr', 'grn' })
-map('n', '<Leader>v', 'gcc', { remap = true, desc = 'Comment Line' })
-map('x', '<Leader>v', 'gc', { remap = true, desc = 'Comment Selection' })
+map('n', '<Leader>v', 'gcc', { remap = true, desc = '注释当前行' })
+map('x', '<Leader>v', 'gc', { remap = true, desc = '注释选区' })
 
 -- Macros
-map('n', '<C-q>', 'q', { desc = 'Macro Prefix' })
+map('n', '<C-q>', 'q', { desc = '宏前缀' })
 
 -- Formatting
-map('n', '<leader>cid', '<cmd>LazyDev<CR>', { silent = true, desc = 'Dev' })
-map('n', '<leader>cif', '<cmd>LazyFormatInfo<CR>', { silent = true, desc = 'Formatter Info' })
-map('n', '<leader>cir', '<cmd>LazyRoot<CR>', { silent = true, desc = 'Root' })
-map('n', '<leader>cil', '<cmd>check lspconfig<cr>', { desc = 'LSP info popup' })
-map({ 'n', 'x' }, '<leader>cs', function() formatter_select() end, { desc = 'Formatter Select' })
+map('n', '<leader>cid', '<cmd>LazyDev<CR>', { silent = true, desc = '开发信息' })
+map('n', '<leader>cif', '<cmd>LazyFormatInfo<CR>', { silent = true, desc = '格式化信息' })
+map('n', '<leader>cir', '<cmd>LazyRoot<CR>', { silent = true, desc = '项目根目录' })
+map('n', '<leader>cil', '<cmd>check lspconfig<cr>', { desc = 'LSP 信息' })
+map({ 'n', 'x' }, '<leader>cs', function() formatter_select() end, { desc = '选择格式化器' })
 
 -- Start new line from any cursor position in insert-mode
-map('i', '<S-Return>', '<C-o>o', { desc = 'Start Newline' })
-map('n', ']<Leader>', ':set paste<CR>m`o<Esc>``:set nopaste<CR>', { silent = true, desc = 'Newline' })
-map('n', '[<Leader>', ':set paste<CR>m`O<Esc>``:set nopaste<CR>', { silent = true, desc = 'Newline' })
+map('i', '<S-Return>', '<C-o>o', { desc = '插入新行' })
+map('n', ']<Leader>', ':set paste<CR>m`o<Esc>``:set nopaste<CR>', { silent = true, desc = '新建行' })
+map('n', '[<Leader>', ':set paste<CR>m`O<Esc>``:set nopaste<CR>', { silent = true, desc = '新建行' })
 
 -- Drag current line(s) vertically and auto-indent
-map('n', '<Leader>k', '<cmd>move-2<CR>==', { silent = true, desc = 'Move line up' })
-map('n', '<Leader>j', '<cmd>move+<CR>==', { silent = true, desc = 'Move line down' })
-map('x', '<Leader>k', ":move'<-2<CR>gv=gv", { silent = true, desc = 'Move selection up' })
-map('x', '<Leader>j', ":move'>+<CR>gv=gv", { silent = true, desc = 'Move selection down' })
+map('n', '<Leader>k', '<cmd>move-2<CR>==', { silent = true, desc = '上移一行' })
+map('n', '<Leader>j', '<cmd>move+<CR>==', { silent = true, desc = '下移一行' })
+map('x', '<Leader>k', ":move'<-2<CR>gv=gv", { silent = true, desc = '上移选区' })
+map('x', '<Leader>j', ":move'>+<CR>gv=gv", { silent = true, desc = '下移选区' })
 
 -- Duplicate lines without affecting PRIMARY and CLIPBOARD selections.
-map('n', '<Leader>dd', 'm`""Y""P``', { desc = 'Duplicate line' })
-map('x', '<Leader>dd', '""Y""Pgv', { desc = 'Duplicate selection' })
+map('n', '<Leader>dd', 'm`""Y""P``', { desc = '复制行' })
+map('x', '<Leader>dd', '""Y""Pgv', { desc = '复制选区' })
 
 -- }}}
 -- Search, substitute, diff {{{
@@ -242,24 +242,24 @@ map('n', 'g*', '*')
 map('n', '#', 'g#')
 map('n', 'g#', '#')
 
-map('n', '<C-c>', 'ciw', { desc = 'Change Inner Word' })
+map('n', '<C-c>', 'ciw', { desc = '替换单词' })
 
 -- Use backspace key for matching pairs
-map({ 'n', 'x' }, '<BS>', '%', { remap = true, desc = 'Jump to Paren' })
+map({ 'n', 'x' }, '<BS>', '%', { remap = true, desc = '跳转括号' })
 
 -- Toggle diff on all windows in current tab
 map('n', '<Leader>bf', function()
 	vim.cmd('windo diff' .. (vim.wo.diff and 'off' or 'this'))
-end, { desc = 'Diff Windows in Tab' })
+end, { desc = '窗口差异对比' })
 
 -- External diff
-map('n', '<Leader>bF', '<cmd>!' .. vim.g.diffprg .. ' % #<CR>', { desc = 'Diff with' .. vim.g.diffprg })
+map('n', '<Leader>bF', '<cmd>!' .. vim.g.diffprg .. ' % #<CR>', { desc = '与外部程序对比' .. vim.g.diffprg })
 
 -- }}}
 -- Command & History {{{
 
 -- Put vim command output into buffer
-map('n', 'g!', ":put=execute('')<Left><Left>", { desc = 'Paste Command' })
+map('n', 'g!', ":put=execute('')<Left><Left>", { desc = '粘贴命令输出' })
 
 -- Switch history search pairs, matching my bash shell
 map('c', '<Up>', '<C-p>')
@@ -281,21 +281,21 @@ map('n', '<Leader>cd', function()
 		vim.cmd.tcd(bufdir)
 		vim.notify(bufdir)
 	end
-end, { desc = 'Change Tab Directory' })
+end, { desc = '切换标签页目录' })
 
 -- Fast saving from all modes
 unmap('n', { '<leader>w', '<leader>wd', '<leader>wm' })
-map('n', '<Leader>w', '<cmd>write<CR>', { desc = 'Save File' })
-map('n', '<M-s>', '<cmd>write<CR>', { desc = 'Save File' })
+map('n', '<Leader>w', '<cmd>write<CR>', { desc = '保存文件' })
+map('n', '<M-s>', '<cmd>write<CR>', { desc = '保存文件' })
 
 -- }}}
 -- Editor UI {{{
 
 -- Toggle list windows
-map('n', '<leader>xl', function() toggle_list('loclist') end, { desc = 'Toggle Location List' })
-map('n', '<leader>xq', function() toggle_list('quickfix') end, { desc = 'Toggle Quickfix List' })
+map('n', '<leader>xl', function() toggle_list('loclist') end, { desc = '切换位置列表' })
+map('n', '<leader>xq', function() toggle_list('quickfix') end, { desc = '切换快速修复列表' })
 
-map('n', '<Leader>ce', vim.diagnostic.open_float, { desc = 'Line Diagnostics' })
+map('n', '<Leader>ce', vim.diagnostic.open_float, { desc = '行诊断' })
 
 -- Set locations with diagnostics and open the list.
 map('n', '<Leader>a', function()
@@ -303,45 +303,45 @@ map('n', '<Leader>a', function()
 		vim.diagnostic.setloclist({ open = false })
 	end
 	toggle_list('loclist')
-end, { desc = 'Open Location List' })
+end, { desc = '打开位置列表' })
 
 -- }}}
 -- Plugins & Tools {{{
 
 -- Package-manager
-map('n', '<leader>mx', '<cmd>LazyExtras<cr>', { desc = 'Open Plugin Extras' })
+map('n', '<leader>mx', '<cmd>LazyExtras<cr>', { desc = '打开插件扩展' })
 
 -- Append mode-line to current buffer
-map('n', '<Leader>ml', function() append_modeline() end, { desc = 'Append Modeline' })
+map('n', '<Leader>ml', function() append_modeline() end, { desc = '添加文件设置行' })
 
 -- Jump entire buffers throughout jumplist
-map('n', 'g<C-i>', function() jump_buffer(1) end, { desc = 'Jump to newer buffer' })
-map('n', 'g<C-o>', function() jump_buffer(-1) end, { desc = 'Jump to older buffer' })
+map('n', 'g<C-i>', function() jump_buffer(1) end, { desc = '跳转到较新的缓冲区' })
+map('n', 'g<C-o>', function() jump_buffer(-1) end, { desc = '跳转到较旧的缓冲区' })
 
 -- Context aware menu. See lua/lib/contextmenu.lua
-map('n', '<RightMouse>', function() require('rafi.util.contextmenu').show() end, { desc = 'Context-aware menu' })
-map('n', '<LocalLeader>c', function() require('rafi.util.contextmenu').show() end, { desc = 'Context-aware menu' })
+map('n', '<RightMouse>', function() require('rafi.util.contextmenu').show() end, { desc = '上下文菜单' })
+map('n', '<LocalLeader>c', function() require('rafi.util.contextmenu').show() end, { desc = '上下文菜单' })
 
 -- Base64 encode/decode
-map('x', '<leader>64e', function() base64() end, { desc = 'Base64 Encode' })
-map('x', '<leader>64d', function() base64(false) end, { desc = 'Base64 Decode' })
+map('x', '<leader>64e', function() base64() end, { desc = 'Base64 编码' })
+map('x', '<leader>64d', function() base64(false) end, { desc = 'Base64 解码' })
 
 -- Lazygit
 if vim.fn.executable('lazygit') == 1 then
 	---@diagnostic disable-next-line: missing-fields
-	map('n', '<leader>gt', function() Snacks.lazygit( { cwd = LazyVim.root.git() }) end, { desc = 'Lazygit (Root Dir)' })
-	map('n', '<leader>gT', function() Snacks.lazygit() end, { desc = 'Lazygit (cwd)' })
+	map('n', '<leader>gt', function() Snacks.lazygit( { cwd = LazyVim.root.git() }) end, { desc = 'Lazygit（根目录）' })
+	map('n', '<leader>gT', function() Snacks.lazygit() end, { desc = 'Lazygit（当前目录）' })
 end
 
-map('n', '<leader>gm', function() Snacks.picker.git_log_line() end, { desc = 'Git Blame Line' })
-map({ 'n', 'x' }, '<leader>go', function() Snacks.gitbrowse() end, { desc = 'Git Browse' })
+map('n', '<leader>gm', function() Snacks.picker.git_log_line() end, { desc = '查看行责任' })
+map({ 'n', 'x' }, '<leader>go', function() Snacks.gitbrowse() end, { desc = '浏览 Git 链接' })
 
 -- Terminal Mappings
-map('t', '<C-g>', '<C-\\><C-n>', { desc = 'Enter Normal Mode' })
+map('t', '<C-g>', '<C-\\><C-n>', { desc = '进入普通模式' })
 
 if vim.fn.has('mac') then
 	-- Open the macOS dictionary on current word
-	map('n', '<Leader>?', '<cmd>silent !open dict://<cword><CR>', { desc = 'Dictionary' })
+	map('n', '<Leader>?', '<cmd>silent !open dict://<cword><CR>', { desc = '词典查询' })
 end
 
 -- }}}
@@ -390,25 +390,25 @@ if vim.F.if_nil(vim.g.window_q_mapping, false) then
 				vim.cmd[[quit]]
 			end
 		end
-	end, { desc = 'Close window' })
+	end, { desc = '关闭窗口' })
 end
 
-map('n', 's', '<Nop>', { desc = '+screen' })
-map('n', 's]', '<C-w>x<C-w>w', { remap = true, desc = 'Swap adjacent windows' })
-map('n', 'sb', '<cmd>buffer#<CR>', { desc = 'Alternate buffer' })
-map('n', 'sc', '<cmd>close<CR>', { desc = 'Close window' })
-map('n', 'sd', '<cmd>bdelete<CR>', { desc = 'Buffer delete' })
-map('n', 'sv', '<cmd>split<CR>', { desc = 'Split window horizontally' })
-map('n', 'sg', '<cmd>vsplit<CR>', { desc = 'Split window vertically' })
-map('n', 'st', '<cmd>tabnew<CR>', { desc = 'New tab' })
-map('n', 'so', '<cmd>only<CR>', { desc = 'Close other windows' })
-map('n', 'sq', '<cmd>quit<CR>', { desc = 'Quit' })
+map('n', 's', '<Nop>', { desc = '+屏幕操作' })
+map('n', 's]', '<C-w>x<C-w>w', { remap = true, desc = '交换相邻窗口' })
+map('n', 'sb', '<cmd>buffer#<CR>', { desc = '切换上一个缓冲区' })
+map('n', 'sc', '<cmd>close<CR>', { desc = '关闭窗口' })
+map('n', 'sd', '<cmd>bdelete<CR>', { desc = '删除缓冲区' })
+map('n', 'sv', '<cmd>split<CR>', { desc = '水平分割窗口' })
+map('n', 'sg', '<cmd>vsplit<CR>', { desc = '垂直分割窗口' })
+map('n', 'st', '<cmd>tabnew<CR>', { desc = '新建标签页' })
+map('n', 'so', '<cmd>only<CR>', { desc = '关闭其他窗口' })
+map('n', 'sq', '<cmd>quit<CR>', { desc = '退出' })
 Snacks.toggle.zoom():map('sz')
 Snacks.toggle.zen():map('sZ')
 map('n', 'sx', function()
 	Snacks.bufdelete({ wipe = true })
 	vim.cmd.enew()
-end, { desc = 'Delete buffer and open new' })
+end, { desc = '删除缓冲区并新建' })
 
 -- }}}
 
@@ -491,7 +491,7 @@ function _G.append_modeline() -- {{{
 		end
 	end
 	if not cs then
-		LazyVim.warn('No commentstring found')
+		LazyVim.warn('未找到可用的注释格式')
 		return
 	end
 	modeline = string.gsub(cs, '%%s', modeline)
@@ -519,7 +519,7 @@ function _G.jump_buffer(direction) -- {{{
 		local nr = jumplist[i]['bufnr']
 		if nr ~= cur_buf and vim.fn.bufname(nr):find('^%w+://') == nil then
 			local n = tostring(math.abs(i - curjump))
-			vim.notify('Executing ' .. jumpcmd .. ' ' .. n .. ' times')
+			vim.notify('执行 ' .. jumpcmd .. ' ' .. n .. ' 次')
 			jumpcmd = vim.api.nvim_replace_termcodes(jumpcmd, true, true, true)
 			vim.cmd.normal({ n .. jumpcmd, bang = true })
 			break
@@ -597,7 +597,7 @@ function _G.formatter_select() -- {{{
 		end
 		LazyVim.try(function()
 			return source.client.format(bufnr)
-		end, { msg = 'Formatter `' .. source.name .. '` failed' })
+		end, { msg = '格式化器 `' .. source.name .. '` 执行失败' })
 	end
 
 	if total_sources == 1 then
@@ -605,9 +605,9 @@ function _G.formatter_select() -- {{{
 	elseif total_sources > 1 then
 		-- Display a list of sources to choose from
 		vim.ui.select(sources, {
-			prompt = 'Select a formatter',
+			prompt = '选择格式化器',
 			format_item = function(item)
-				return item.name .. ' (' .. item.kind .. ')'
+				return item.name .. '（' .. item.kind .. '）'
 			end,
 		}, function(selected)
 			if is_visual then
@@ -619,10 +619,7 @@ function _G.formatter_select() -- {{{
 			apply_source(buf, selected)
 		end)
 	else
-		vim.notify(
-			'No configured formatters for this filetype.',
-			vim.log.levels.WARN
-		)
+		vim.notify('当前文件类型未配置格式化器。', vim.log.levels.WARN)
 	end
 end -- }}}
 

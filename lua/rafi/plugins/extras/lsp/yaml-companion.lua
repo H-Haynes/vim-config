@@ -23,7 +23,7 @@ return {
 		},
 		-- stylua: ignore
 		keys = {
-			{ '<localleader>y', '<cmd>Telescope yaml_schema<CR>', desc = 'YAML Schema' },
+			{ '<localleader>y', '<cmd>Telescope yaml_schema<CR>', desc = 'YAML 模式' },
 		},
 		opts = {},
 		config = function(_, _)

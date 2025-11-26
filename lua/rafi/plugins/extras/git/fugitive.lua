@@ -6,8 +6,8 @@ return {
 		'tpope/vim-fugitive',
 		cmd = { 'G', 'Git', 'Gfetch', 'Gpush', 'Gclog', 'Gdiffsplit' },
 		keys = {
-			{ '<leader>gd', '<cmd>Gdiffsplit<CR>', desc = 'Git diff' },
-			{ '<leader>gb', '<cmd>Git blame<CR>', desc = 'Git blame' },
+			{ '<leader>gd', '<cmd>Gdiffsplit<CR>', desc = 'Git 差异' },
+			{ '<leader>gb', '<cmd>Git blame<CR>', desc = 'Git 注释' },
 		},
 		config = function()
 			vim.api.nvim_create_autocmd('FileType', {
@@ -29,7 +29,7 @@ return {
 		dependencies = { 'tpope/vim-fugitive' },
 		cmd = 'GV',
 		keys = {
-			{ '<leader>gl', '<cmd>GV<CR>', desc = 'Git log viewer' },
+			{ '<leader>gl', '<cmd>GV<CR>', desc = 'Git 日志查看器' },
 		},
 	},
 }

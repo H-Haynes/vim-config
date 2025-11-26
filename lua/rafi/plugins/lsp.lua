@@ -15,11 +15,11 @@ return {
 			keys = {
 				{ '<leader>cl', false },
 				{ '<c-k>', false, mode = 'i' },
-				{ '<leader>cli', vim.lsp.buf.incoming_calls, desc = 'Incoming calls' },
-				{ '<leader>clo', vim.lsp.buf.outgoing_calls, desc = 'Outgoing calls' },
-				{ '<leader>fwa', vim.lsp.buf.add_workspace_folder, desc = 'Show Workspace Folders' },
-				{ '<leader>fwr', vim.lsp.buf.remove_workspace_folder, desc = 'Remove Workspace Folder' },
-				{ '<leader>fwl', '<cmd>lua =vim.lsp.buf.list_workspace_folders()<CR>', desc = 'List Workspace Folders' },
+				{ '<leader>cli', vim.lsp.buf.incoming_calls, desc = '传入调用' },
+				{ '<leader>clo', vim.lsp.buf.outgoing_calls, desc = '传出调用' },
+				{ '<leader>fwa', vim.lsp.buf.add_workspace_folder, desc = '显示工作区文件夹' },
+				{ '<leader>fwr', vim.lsp.buf.remove_workspace_folder, desc = '移除工作区文件夹' },
+				{ '<leader>fwl', '<cmd>lua =vim.lsp.buf.list_workspace_folders()<CR>', desc = '列出工作区文件夹' },
 			},
 		},
 	},
@@ -28,12 +28,12 @@ return {
 	-- Portable package manager for Neovim
 	-- NOTE: This extends
 	-- $XDG_DATA_HOME/nvim/lazy/LazyVim/lua/lazyvim/plugins/lsp/init.lua
-	{
-		'mason.nvim',
-		opts = {
-			ui = {
-				border = 'rounded',
-			},
-		},
-	},
+	-- {
+	-- 	'mason.nvim',
+	-- 	opts = {
+	-- 		ui = {
+	-- 			border = 'rounded',
+	-- 		},
+	-- 	},
+	-- },
 }

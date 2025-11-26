@@ -2,7 +2,7 @@
 --
 
 return {
-	desc = 'Imports YAML lang and adds common manifest patterns for schemas.',
+	desc = '引入 YAML 语言扩展并提供常见清单 Schema 模式。',
 	recommended = function()
 		return LazyVim.extras.wants({ ft = 'yaml' })
 	end,
@@ -14,7 +14,7 @@ return {
 		cmd = { 'Kubectl', 'Kubectx', 'Kubens' },
 		-- stylua: ignore
 		keys = {
-			{ '<leader>8', function() vim.cmd[[tabnew]]; require('kubectl').open() end, desc = 'Kubectl' },
+			{ '<leader>8', function() vim.cmd[[tabnew]]; require('kubectl').open() end, desc = 'Kubectl 控制台' },
 		},
 		opts = {},
 	},

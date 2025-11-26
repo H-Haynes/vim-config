@@ -7,7 +7,7 @@ return {
 		ft = 'http',
 		cmd = 'Rest',
 		keys = {
-			{ '<Leader>ch', '<cmd>Rest run<CR>', desc = 'Execute HTTP request' },
+			{ '<Leader>ch', '<cmd>Rest run<CR>', desc = '执行 HTTP 请求' },
 		},
 		opts = { skip_ssl_verification = true },
 	},

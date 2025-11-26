@@ -5,8 +5,8 @@ return {
 		'nvim-pack/nvim-spectre',
 		-- stylua: ignore
 		keys = {
-			{ '<Leader>sp', function() require('spectre').toggle() end, desc = 'Spectre', },
-			{ '<Leader>sp', function() require('spectre').open_visual({ select_word = true }) end, mode = 'x', desc = 'Spectre Word' },
+			{ '<Leader>sp', function() require('spectre').toggle() end, desc = '搜索替换', },
+			{ '<Leader>sp', function() require('spectre').open_visual({ select_word = true }) end, mode = 'x', desc = '搜索替换单词' },
 		},
 		opts = {
 			open_cmd = 'noswapfile vnew',
@@ -14,7 +14,7 @@ return {
 				['toggle_gitignore'] = {
 					map = 'tg',
 					cmd = "<cmd>lua require('spectre').change_options('gitignore')<CR>",
-					desc = 'toggle gitignore',
+					desc = '切换 gitignore 规则',
 				},
 			},
 			find_engine = {
@@ -33,7 +33,7 @@ return {
 						['gitignore'] = {
 							value = '--no-ignore',
 							icon = '[G]',
-							desc = 'gitignore',
+							desc = '遵循 gitignore',
 						},
 					},
 				},

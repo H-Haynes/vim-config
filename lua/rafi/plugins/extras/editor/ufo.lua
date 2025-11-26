@@ -1,19 +1,36 @@
 return {
 
+	-- {
+	-- 	'neovim/nvim-lspconfig',
+	-- 	opts = {
+	-- 		capabilities = {
+	-- 			textDocument = {
+	-- 				foldingRange = {
+	-- 					dynamicRegistration = false,
+	-- 					lineFoldingOnly = true,
+	-- 				},
+	-- 			},
+	-- 		},
+	-- 	},
+	-- },
+
 	{
-		'neovim/nvim-lspconfig',
+		"neovim/nvim-lspconfig",
 		opts = {
-			capabilities = {
-				textDocument = {
-					foldingRange = {
-						dynamicRegistration = false,
-						lineFoldingOnly = true,
+			servers = {
+				["*"] = {
+					capabilities = {
+						textDocument = {
+							foldingRange = {
+								dynamicRegistration = false,
+								lineFoldingOnly = true,
+							},
+						},
 					},
 				},
 			},
 		},
 	},
-
 	-- Make folds look modern and keep a high performance
 	{
 		'kevinhwang91/nvim-ufo',

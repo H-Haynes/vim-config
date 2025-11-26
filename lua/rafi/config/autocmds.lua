@@ -54,7 +54,7 @@ vim.api.nvim_create_autocmd('FileType', {
 			end, {
 				buffer = event.buf,
 				silent = true,
-				desc = 'Quit buffer',
+				desc = '关闭缓冲区',
 			})
 		end)
 	end,

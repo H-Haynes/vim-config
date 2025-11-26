@@ -39,8 +39,8 @@ setmetatable(M, {
 })
 
 function M.deprecate(old, new)
-	M.warn(('`%s` is deprecated. Please use `%s` instead'):format(old, new), {
-		title = 'Rafi',
+	M.warn(('`%s` 已被弃用，请改用 `%s`'):format(old, new), {
+		title = 'Rafi 提示',
 		once = true,
 		stacktrace = true,
 		stacklevel = 6,

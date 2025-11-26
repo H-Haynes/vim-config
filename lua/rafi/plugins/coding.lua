@@ -28,7 +28,7 @@ return {
 		'conform.nvim',
 		-- stylua: ignore
 		keys = {
-			{ '<leader>cic', '<cmd>ConformInfo<CR>', silent = true, desc = 'Conform Info' },
+			{ '<leader>cic', '<cmd>ConformInfo<CR>', silent = true, desc = '格式化信息' },
 		},
 	},
 
@@ -42,10 +42,23 @@ return {
 			{
 				'<leader>cin',
 				function()
-					vim.notify(vim.inspect(require('lint').linters[vim.bo.filetype]))
+					local linters = require('lint').linters[vim.bo.filetype]
+					if linters then
+						vim.notify(
+							vim.inspect(linters),
+							vim.log.levels.INFO,
+							{ title = '当前检查器' }
+						)
+					else
+						vim.notify(
+							'当前文件类型没有配置检查器',
+							vim.log.levels.WARN,
+							{ title = '当前检查器' }
+						)
+					end
 				end,
 				silent = true,
-				desc = 'Linter Info',
+				desc = '检查器信息',
 			},
 		},
 	},
@@ -75,8 +88,8 @@ return {
 		dependencies = { 'JoosepAlviste/nvim-ts-context-commentstring' },
 		-- stylua: ignore
 		keys = {
-			{ '<leader>V', '<Plug>(comment_toggle_blockwise_current)', mode = 'n', desc = 'Comment' },
-			{ '<leader>V', '<Plug>(comment_toggle_blockwise_visual)', mode = 'x', desc = 'Comment' },
+			{ '<leader>V', '<Plug>(comment_toggle_blockwise_current)', mode = 'n', desc = '注释' },
+			{ '<leader>V', '<Plug>(comment_toggle_blockwise_visual)', mode = 'x', desc = '注释' },
 		},
 		opts = function(_, opts)
 			local ok, tcc =
@@ -93,8 +106,8 @@ return {
 		'nvim-mini/mini.splitjoin',
 		-- stylua: ignore
 		keys = {
-			{ 'sj', '<cmd>lua MiniSplitjoin.join()<CR>', mode = { 'n', 'x' }, desc = 'Join arguments' },
-			{ 'sk', '<cmd>lua MiniSplitjoin.split()<CR>', mode = { 'n', 'x' }, desc = 'Split arguments' },
+			{ 'sj', '<cmd>lua MiniSplitjoin.join()<CR>', mode = { 'n', 'x' }, desc = '合并参数' },
+			{ 'sk', '<cmd>lua MiniSplitjoin.split()<CR>', mode = { 'n', 'x' }, desc = '拆分参数' },
 		},
 		opts = {
 			mappings = { toggle = '' },
@@ -108,7 +121,7 @@ return {
 		event = { 'BufReadPost', 'BufNewFile' },
 		-- stylua: ignore
 		keys = {
-			{ '<leader>cw', '<cmd>lua MiniTrailspace.trim()<CR>', desc = 'Erase Whitespace' },
+			{ '<leader>cw', '<cmd>lua MiniTrailspace.trim()<CR>', desc = '清除空白' },
 		},
 		opts = {},
 	},
@@ -119,10 +132,10 @@ return {
 		'AndrewRadev/linediff.vim',
 		cmd = { 'Linediff', 'LinediffAdd' },
 		keys = {
-			{ '<leader>mdf', ':Linediff<CR>', mode = 'x', desc = 'Line diff' },
-			{ '<leader>mda', ':LinediffAdd<CR>', mode = 'x', desc = 'Line diff add' },
-			{ '<leader>mds', '<cmd>LinediffShow<CR>', desc = 'Line diff show' },
-			{ '<leader>mdr', '<cmd>LinediffReset<CR>', desc = 'Line diff reset' },
+			{ '<leader>mdf', ':Linediff<CR>', mode = 'x', desc = '行差异' },
+			{ '<leader>mda', ':LinediffAdd<CR>', mode = 'x', desc = '添加行差异' },
+			{ '<leader>mds', '<cmd>LinediffShow<CR>', desc = '显示行差异' },
+			{ '<leader>mdr', '<cmd>LinediffReset<CR>', desc = '重置行差异' },
 		},
 	},
 }

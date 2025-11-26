@@ -2,7 +2,7 @@
 --
 
 return {
-	desc = 'Imports Go lang extras and adds more tools.',
+	desc = '引入 Go 语言扩展并提供更多工具。',
 	recommended = function()
 		return LazyVim.extras.wants({
 			ft = { 'go', 'gomod', 'gowork', 'gotmpl' },
@@ -43,15 +43,18 @@ return {
 	},
 
 	{
-		'williamboman/mason.nvim',
+		'mason-org/mason.nvim',
 		opts = {
+			ui = {
+				border = 'rounded',
+			},
 			ensure_installed = {
 				'gofumpt',
 				'goimports-reviser',
 				'gomodifytags',
 				'impl',
 				'json-to-struct',
-			},
+			}
 		},
 	},
 

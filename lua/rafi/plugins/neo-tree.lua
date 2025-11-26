@@ -22,21 +22,21 @@ return {
 	dependencies = { 'MunifTanjim/nui.nvim' },
 	-- stylua: ignore
 	keys = {
-		{ '<localleader>e', '<leader>fe', desc = 'Explorer Tree (Root Dir)', remap = true },
-		{ '<localleader>E', '<leader>fE', desc = 'Explorer Tree (cwd)', remap = true },
+		{ '<localleader>e', '<leader>fe', desc = '资源管理器树（根目录）', remap = true },
+		{ '<localleader>E', '<leader>fE', desc = '资源管理器树（当前目录）', remap = true },
 		{
 			'<localleader>a',
 			function()
 				require('neo-tree.command').execute({ reveal = true, dir = LazyVim.root() })
 			end,
-			desc = 'Reveal in Explorer',
+			desc = '在资源管理器中显示',
 		},
 		{
 			'<localleader>A',
 			function()
 				require('neo-tree.command').execute({ reveal = true, dir = vim.uv.cwd() })
 			end,
-			desc = 'Reveal in Explorer (cwd)',
+			desc = '在资源管理器中显示（当前目录）',
 		},
 	},
 	-- See: https://github.com/nvim-neo-tree/neo-tree.nvim
@@ -51,8 +51,8 @@ return {
 			show_scrolled_off_parent_node = true,
 			padding = { left = 1, right = 0 },
 			sources = {
-				{ source = 'filesystem', display_name = '  Files' }, --      
-				{ source = 'buffers', display_name = '  Buffers' }, --      
+				{ source = 'filesystem', display_name = '  文件' }, --      
+				{ source = 'buffers', display_name = '  缓冲区' }, --      
 				{ source = 'git_status', display_name = ' 󰊢 Git' }, -- 󰊢      
 			},
 		},
@@ -180,7 +180,7 @@ return {
 						local path = node:get_id()
 						vim.fn.setreg('+', path, 'c')
 					end,
-					desc = 'Copy Path to Clipboard',
+					desc = '复制路径到剪贴板',
 				},
 
 				['O'] = {
@@ -190,7 +190,7 @@ return {
 							{ system = true }
 						)
 					end,
-					desc = 'Open with System Application',
+					desc = '用系统应用打开',
 				},
 			},
 		},

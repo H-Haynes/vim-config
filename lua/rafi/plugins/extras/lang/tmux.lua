@@ -8,7 +8,7 @@ LazyVim.on_very_lazy(function()
 end)
 
 return {
-	desc = 'Tmux syntax, navigator (<C-h/j/k/l>), and completion.',
+	desc = '提供 Tmux 语法、高级导航（<C-h/j/k/l>）与补全支持。',
 	recommended = function()
 		return vim.env.TMUX ~= nil
 	end,
@@ -53,10 +53,10 @@ return {
 		cond = vim.env.TMUX and vim.uv.os_uname().sysname ~= 'Windows_NT',
 		-- stylua: ignore
 		keys = {
-			{ '<C-h>', '<cmd>TmuxNavigateLeft<CR>', mode = { 'n', 't' }, silent = true, desc = 'Go to Left Window' },
-			{ '<C-j>', '<cmd>TmuxNavigateDown<CR>', mode = { 'n', 't' }, silent = true, desc = 'Go to Lower Window' },
-			{ '<C-k>', '<cmd>TmuxNavigateUp<CR>', mode = { 'n', 't' }, silent = true, desc = 'Go to Upper Window' },
-			{ '<C-l>', '<cmd>TmuxNavigateRight<CR>', mode = { 'n', 't' }, silent = true, desc = 'Go to Right Window' },
+			{ '<C-h>', '<cmd>TmuxNavigateLeft<CR>', mode = { 'n', 't' }, silent = true, desc = '跳转到左侧窗口' },
+			{ '<C-j>', '<cmd>TmuxNavigateDown<CR>', mode = { 'n', 't' }, silent = true, desc = '跳转到下方窗口' },
+			{ '<C-k>', '<cmd>TmuxNavigateUp<CR>', mode = { 'n', 't' }, silent = true, desc = '跳转到上方窗口' },
+			{ '<C-l>', '<cmd>TmuxNavigateRight<CR>', mode = { 'n', 't' }, silent = true, desc = '跳转到右侧窗口' },
 		},
 		init = function()
 			vim.g.tmux_navigator_no_mappings = true

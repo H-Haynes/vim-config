@@ -8,7 +8,7 @@ LazyVim.on_very_lazy(function()
 end)
 
 return {
-	desc = 'Markdown lang extras, without headlines plugin, and toc generator.',
+	desc = '引入 Markdown 语言扩展，移除 headlines 插件并启用目录生成器。',
 	recommended = function()
 		return LazyVim.extras.wants({
 			ft = { 'markdown', 'markdown.mdx' },
@@ -25,7 +25,7 @@ return {
 		cmd = { 'GenTocGFM', 'GenTocRedcarpet', 'GenTocGitLab', 'UpdateToc' },
 		ft = 'markdown',
 		keys = {
-			{ '<leader>mo', '<cmd>UpdateToc<CR>', desc = 'Update table of contents' },
+			{ '<leader>mo', '<cmd>UpdateToc<CR>', desc = '更新目录' },
 		},
 		init = function()
 			vim.g.vmt_auto_update_on_save = 0

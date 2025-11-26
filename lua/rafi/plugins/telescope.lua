@@ -75,7 +75,7 @@ local plugin_directories = function(opts)
 				width = 0.65,
 				height = 0.7,
 			},
-			prompt_title = '[ Plugin directories ]',
+			prompt_title = '[ 插件目录 ]',
 			finder = require('telescope.finders').new_table({
 				results = utils.get_os_command_output(opts.cmd),
 				entry_maker = opts.entry_maker,
@@ -159,30 +159,30 @@ return {
 		-- stylua: ignore
 		keys = {
 			{ '<leader><space>', false },
-			{ '<leader><localleader>', '<cmd>Telescope pickers<CR>', desc = 'Pickers' },
-			{ '<localleader>u', '<cmd>Telescope spell_suggest<CR>', desc = 'Spell Suggest' },
-			{ '<localleader>/', '<cmd>Telescope search_history<CR>', desc = 'Search History' },
+			{ '<leader><localleader>', '<cmd>Telescope pickers<CR>', desc = '选择器' },
+			{ '<localleader>u', '<cmd>Telescope spell_suggest<CR>', desc = '拼写建议' },
+			{ '<localleader>/', '<cmd>Telescope search_history<CR>', desc = '搜索历史' },
 
 			-- LSP related
-			{ '<localleader>dd', '<cmd>Telescope lsp_definitions<CR>', desc = 'Definitions' },
-			{ '<localleader>di', '<cmd>Telescope lsp_implementations<CR>', desc = 'Implementations' },
-			{ '<localleader>dr', '<cmd>Telescope lsp_references<CR>', desc = 'References' },
-			{ '<localleader>da', '<cmd>Telescope lsp_code_actions<CR>', desc = 'Code Actions' },
-			{ '<localleader>da', ':Telescope lsp_range_code_actions<CR>', mode = 'x', desc = 'Code Actions' },
+			{ '<localleader>dd', '<cmd>Telescope lsp_definitions<CR>', desc = '定义' },
+			{ '<localleader>di', '<cmd>Telescope lsp_implementations<CR>', desc = '实现' },
+			{ '<localleader>dr', '<cmd>Telescope lsp_references<CR>', desc = '引用' },
+			{ '<localleader>da', '<cmd>Telescope lsp_code_actions<CR>', desc = '代码操作' },
+			{ '<localleader>da', ':Telescope lsp_range_code_actions<CR>', mode = 'x', desc = '代码操作' },
 
 			-- Plugins
-			{ '<localleader>n', plugin_directories, desc = 'Plugins' },
-			{ '<localleader>k', '<cmd>Telescope thesaurus lookup<CR>', desc = 'Thesaurus' },
+			{ '<localleader>n', plugin_directories, desc = '插件' },
+			{ '<localleader>k', '<cmd>Telescope thesaurus lookup<CR>', desc = '同义词' },
 			{
 				'<localleader>z',
 				function()
 					require('telescope').extensions.zoxide.list({
-						prompt_title = 'Zoxide',
+						prompt_title = 'Zoxide 常用目录',
 						previewer = false,
 						layout_config = { width = 0.6, height = 0.6 },
 					})
 				end,
-				desc = 'Zoxide (MRU)',
+				desc = 'Zoxide (最近使用)',
 			},
 			{
 				'<leader>gf',
@@ -191,7 +191,7 @@ return {
 						default_text = vim.fn.expand('<cword>'),
 					})
 				end,
-				desc = 'Find File',
+				desc = '查找文件',
 			},
 		},
 		opts = function(_, opts)
@@ -438,7 +438,7 @@ return {
 			}
 			opts.extensions = {
 				zoxide = {
-					prompt_title = '[ Zoxide directories ]',
+					prompt_title = '[ Zoxide 目录 ]',
 					mappings = {
 						default = {
 							action = function(selection)

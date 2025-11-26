@@ -29,8 +29,8 @@ return {
 			},
 		},
 		keys = {
-			{ ']]', desc = 'Next Reference' },
-			{ '[[', desc = 'Prev Reference' },
+			{ ']]', desc = '下一个引用' },
+			{ '[[', desc = '上一个引用' },
 		},
 		config = function(_, opts)
 			require('illuminate').configure(opts)

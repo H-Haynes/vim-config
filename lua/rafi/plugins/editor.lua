@@ -36,7 +36,7 @@ return {
 		event = 'VimEnter',
 		-- stylua: ignore
 		keys = {
-			{ '<localleader>s', "<cmd>lua require'persistence'.select()<CR>", desc = 'Sessions' },
+			{ '<localleader>s', "<cmd>lua require'persistence'.select()<CR>", desc = '会话列表' },
 		},
 		opts = {
 			branch = false,
@@ -117,7 +117,7 @@ return {
 		keys = {
 			-- Disable LazyVim default 's' keymap, switch to 'ss'
 			{ 's', mode = { 'n', 'x', 'o' }, false },
-			{ 'ss', mode = { 'n', 'x', 'o' }, function() require('flash').jump() end, desc = 'Flash' },
+			{ 'ss', mode = { 'n', 'x', 'o' }, function() require('flash').jump() end, desc = 'Flash 跳转' },
 		},
 	},
 
@@ -135,7 +135,7 @@ return {
 				function()
 					require('which-key').show({ global = false })
 				end,
-				desc = 'Buffer Keymaps (which-key)',
+				desc = '缓冲区快捷键（which-key）',
 			},
 		},
 		-- stylua: ignore
@@ -178,9 +178,9 @@ return {
 			{ '<leader>cs', false },
 			{ '<leader>cS', false },
 
-			{ 'gR', function() require('trouble').open('lsp_references') end, desc = 'LSP References (Trouble)' },
-			{ '<leader>xs', '<cmd>Trouble symbols toggle<CR>', desc = 'Symbols (Trouble)' },
-			{ '<leader>xS', '<cmd>Trouble lsp toggle<CR>', desc = 'LSP references/definitions/... (Trouble)' },
+			{ 'gR', function() require('trouble').open('lsp_references') end, desc = 'LSP 引用（Trouble）' },
+			{ '<leader>xs', '<cmd>Trouble symbols toggle<CR>', desc = '符号列表（Trouble）' },
+			{ '<leader>xS', '<cmd>Trouble lsp toggle<CR>', desc = 'LSP 引用/定义…（Trouble）' },
 		},
 	},
 
@@ -199,7 +199,7 @@ return {
 		'hedyhli/outline.nvim',
 		cmd = { 'Outline', 'OutlineOpen' },
 		keys = {
-			{ '<leader>o', '<cmd>Outline<CR>', desc = 'Toggle outline' },
+			{ '<leader>o', '<cmd>Outline<CR>', desc = '切换大纲' },
 		},
 		opts = function()
 			local defaults = require('outline.config').defaults
@@ -230,7 +230,7 @@ return {
 		'mbbill/undotree',
 		cmd = 'UndotreeToggle',
 		keys = {
-			{ '<leader>gu', '<cmd>UndotreeToggle<CR>', desc = 'Undo Tree' },
+			{ '<leader>gu', '<cmd>UndotreeToggle<CR>', desc = '撤销树' },
 		},
 	},
 
@@ -259,8 +259,8 @@ return {
 			end
 
 			local mappings = {
-				{ 'sp', pick_window, desc = 'Pick window' },
-				{ 'sw', swap_window, desc = 'Swap picked window' },
+				{ 'sp', pick_window, desc = '选择窗口' },
+				{ 'sw', swap_window, desc = '交换所选窗口' },
 			}
 			return vim.list_extend(mappings, keys)
 		end,
@@ -285,12 +285,12 @@ return {
 		cmd = 'Glance',
 		-- stylua: ignore
 		keys = {
-			{ '<leader>cg', '', desc = '+glance' },
-			{ '<leader>cgd', '<cmd>Glance definitions<CR>', desc = 'Glance Definitions' },
-			{ '<leader>cgr', '<cmd>Glance references<CR>', desc = 'Glance References' },
-			{ '<leader>cgy', '<cmd>Glance type_definitions<CR>', desc = 'Glance Type Definitions' },
-			{ '<leader>cgi', '<cmd>Glance implementations<CR>', desc = 'Glance implementations' },
-			{ '<leader>cgu', '<cmd>Glance resume<CR>', desc = 'Glance Resume' },
+			{ '<leader>cg', '', desc = 'Glance 操作' },
+			{ '<leader>cgd', '<cmd>Glance definitions<CR>', desc = 'Glance 定义' },
+			{ '<leader>cgr', '<cmd>Glance references<CR>', desc = 'Glance 引用' },
+			{ '<leader>cgy', '<cmd>Glance type_definitions<CR>', desc = 'Glance 类型定义' },
+			{ '<leader>cgi', '<cmd>Glance implementations<CR>', desc = 'Glance 实现' },
+			{ '<leader>cgu', '<cmd>Glance resume<CR>', desc = 'Glance 恢复' },
 		},
 		opts = function()
 			local actions = require('glance').actions

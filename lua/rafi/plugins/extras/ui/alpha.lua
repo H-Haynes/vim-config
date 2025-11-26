@@ -1,7 +1,7 @@
 return {
 
 	{ 'nvimdev/dashboard-nvim', optional = true, enabled = false },
-	{ 'echasnovski/mini.starter', optional = true, enabled = false },
+	{ 'nvim-mini/mini.starter', optional = true, enabled = false },
 	{
 		'folke/persistence.nvim',
 		opts = { autoload = false },
@@ -24,7 +24,7 @@ return {
 					val = {
 						{
 							type = 'text',
-							val = 'Recent files',
+							val = '最近的文件',
 							opts = {
 								hl = 'SpecialComment',
 								shrink_margin = false,
@@ -43,19 +43,19 @@ return {
 				},
 				{ type = 'padding', val = 2 },
 
-				{ type = 'text', val = 'Quick links', opts = { hl = 'SpecialComment', position = 'center' } },
+				{ type = 'text', val = '快速链接', opts = { hl = 'SpecialComment', position = 'center' } },
 				{ type = 'padding', val = 1 },
-				dashboard.button('f', ' ' .. ' Find file',       LazyVim.pick()),
-				dashboard.button('n', ' ' .. ' New file',        [[<cmd> ene <BAR> startinsert <CR>]]),
-				dashboard.button('r', ' ' .. ' Recent files',    LazyVim.pick('oldfiles')),
-				dashboard.button('g', ' ' .. ' Find text',       LazyVim.pick('live_grep')),
+				dashboard.button('f', ' ' .. ' 查找文件',       LazyVim.pick()),
+				dashboard.button('n', ' ' .. ' 新建文件',        [[<cmd> ene <BAR> startinsert <CR>]]),
+				dashboard.button('r', ' ' .. ' 最近的文件',    LazyVim.pick('oldfiles')),
+				dashboard.button('g', ' ' .. ' 查找文本',       LazyVim.pick('live_grep')),
 				{ type = 'text', val = '-------', opts = { hl = 'Comment', position = 'center' } },
-				dashboard.button('c', ' ' .. ' Config',          LazyVim.pick.config_files()),
-				dashboard.button('s', ' ' .. ' Restore Session', [[<cmd> lua require('persistence').load() <CR>]]),
-				dashboard.button('u', ' ' .. ' Update plugins' , '<cmd> Lazy sync <CR>'),
-				dashboard.button('x', ' ' .. ' Lazy Extras',     '<cmd> LazyExtras <CR>'),
-				dashboard.button('l', '󰒲 ' .. ' Lazy',            '<cmd> Lazy <CR>'),
-				dashboard.button('q', ' ' .. ' Quit',            '<cmd> qa <CR>'),
+				dashboard.button('c', ' ' .. ' 配置',          LazyVim.pick.config_files()),
+				dashboard.button('s', ' ' .. ' 恢复会话', [[<cmd> lua require('persistence').load() <CR>]]),
+				dashboard.button('u', ' ' .. ' 更新插件' , '<cmd> Lazy sync <CR>'),
+				dashboard.button('x', ' ' .. ' Lazy 扩展',     '<cmd> LazyExtras <CR>'),
+				dashboard.button('l', '󰒲 ' .. ' Lazy 面板',       '<cmd> Lazy <CR>'),
+				dashboard.button('q', ' ' .. ' 退出',            '<cmd> qa <CR>'),
 				{ type = 'padding', val = 1 },
 			}
 			for _, button in ipairs(dashboard.section.buttons.val) do
@@ -93,13 +93,13 @@ return {
 				callback = function()
 					local stats = require('lazy').stats()
 					local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
-					dashboard.section.footer.val = '⚡ Neovim loaded '
+					dashboard.section.footer.val = '⚡ Neovim 已加载 '
 						.. stats.loaded
 						.. '/'
 						.. stats.count
-						.. ' plugins in '
+						.. ' 个插件，用时 '
 						.. ms
-						.. 'ms'
+						.. ' 毫秒'
 					pcall(vim.cmd.AlphaRedraw)
 				end,
 			})

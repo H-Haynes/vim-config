@@ -5,7 +5,7 @@ return {
 		'uga-rosa/ccc.nvim',
 		event = 'FileType',
 		keys = {
-			{ '<Leader>mc', '<cmd>CccPick<CR>', desc = 'Color-picker' },
+			{ '<Leader>mc', '<cmd>CccPick<CR>', desc = '颜色选择器' },
 		},
 		opts = {
 			highlighter = {

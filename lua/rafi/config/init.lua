@@ -13,8 +13,8 @@ local M = {}
 
 ---@type table<string, string>
 M.deprecated_extras = {
-	['rafi.plugins.extras.editor.telescope'] = '`telescope.nvim` is now the default **RafiVim** picker.',
-	['rafi.plugins.extras.ui.indent-blankline'] = "Use LazyVim's `indent-blankline.nvim` instead.",
+	['rafi.plugins.extras.editor.telescope'] = '`telescope.nvim` 现已成为 **RafiVim** 的默认选择器。',
+	['rafi.plugins.extras.ui.indent-blankline'] = '请改用 LazyVim 自带的 `indent-blankline.nvim`。',
 }
 
 -- Load lua/rafi/config/* and user lua/config/* files.
@@ -24,7 +24,7 @@ function M.load(name)
 	if require('lazy.core.cache').find(mod)[1] then
 		LazyVim.try(function()
 			require(mod)
-		end, { msg = 'Failed loading ' .. mod })
+		end, { msg = '加载 ' .. mod .. ' 失败' })
 	end
 
 	if name == 'options' then
@@ -80,17 +80,17 @@ function M.setup()
 	LazyVim.extras.sources = {
 		{
 			name = 'LazyVim',
-			desc = 'LazyVim extras',
+			desc = 'LazyVim 扩展',
 			module = 'lazyvim.plugins.extras',
 		},
 		{
 			name = 'Rafi ',
-			desc = 'Rafi extras',
+			desc = 'Rafi 扩展',
 			module = 'rafi.plugins.extras',
 		},
 		{
 			name = 'User ',
-			desc = 'User extras',
+			desc = '用户扩展',
 			module = 'plugins.extras',
 		},
 	}

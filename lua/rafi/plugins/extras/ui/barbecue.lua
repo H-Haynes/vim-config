@@ -11,7 +11,7 @@ return {
 					local off = vim.b['barbecue_entries'] == nil
 					require('barbecue.ui').toggle(off and true or nil)
 				end,
-				desc = 'Breadcrumbs toggle',
+				desc = '切换面包屑导航',
 			},
 		},
 		opts = function()

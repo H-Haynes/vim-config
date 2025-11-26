@@ -5,7 +5,7 @@ return {
 		'simrat39/symbols-outline.nvim',
 		cmd = { 'SymbolsOutline', 'SymbolsOutlineOpen' },
 		keys = {
-			{ '<Leader>o', '<cmd>SymbolsOutline<CR>', desc = 'Symbols Outline' },
+			{ '<Leader>o', '<cmd>SymbolsOutline<CR>', desc = '符号大纲' },
 		},
 		opts = function()
 			local defaults = require('symbols-outline.config').defaults

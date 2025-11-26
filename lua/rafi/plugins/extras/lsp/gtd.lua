@@ -9,7 +9,7 @@ return {
 			{
 				'gf',
 				function() require('gtd').exec({ command = 'split' }) end,
-				desc = 'Go to definition or file',
+				desc = '跳转到定义或文件',
 			},
 		},
 		---@diagnostic disable-next-line: undefined-doc-name

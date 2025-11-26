@@ -14,7 +14,7 @@ return {
 		keys = {
 			{ '<S-h>', false },
 			{ '<S-l>', false },
-			{ '<leader>tp', '<Cmd>BufferLinePick<CR>', desc = 'Tab Pick' },
+			{ '<leader>tp', '<Cmd>BufferLinePick<CR>', desc = '选择标签页' },
 		},
 		opts = {
 			options = {
@@ -39,12 +39,12 @@ return {
 					end,
 				},
 				offsets = {
-					{
-						filetype = 'neo-tree',
-						text = 'Neo-tree',
-						highlight = 'Directory',
-						text_align = 'center',
-					},
+				{
+					filetype = 'neo-tree',
+					text = '资源管理器',
+					highlight = 'Directory',
+					text_align = 'center',
+				},
 				},
 			},
 		},
@@ -124,7 +124,7 @@ return {
 		keys = {
 			{
 				'<leader>N',
-				desc = 'Neovim News',
+				desc = 'Neovim 新闻',
 				function()
 					---@diagnostic disable-next-line: missing-fields
 					Snacks.win({
@@ -151,12 +151,12 @@ return {
 			end
 			-- stylua: ignore
 			local mappings = {
-				{ '<leader><localleader>', function() Snacks.picker() end, mode = { 'n', 'x' }, desc = 'Pickers' },
-				{ '<localleader>i', function() Snacks.picker.icons() end, mode = { 'n', 'x' }, desc = 'Spellcheck' },
-				{ '<localleader>n', function() Snacks.picker.notifications() end, desc = 'Notifications' },
-				{ '<localleader>u', function() Snacks.picker.spelling() end, mode = { 'n', 'x' }, desc = 'Spellcheck' },
-				{ '<localleader>/', function() Snacks.picker.search_history() end, mode = { 'n', 'x' }, desc = 'Search History' },
-				{ '<leader>gF', function() Snacks.picker.files({ pattern = vim.fn.expand('<cword>') }) end, desc = 'Find File' },
+				{ '<leader><localleader>', function() Snacks.picker() end, mode = { 'n', 'x' }, desc = '选择器' },
+				{ '<localleader>i', function() Snacks.picker.icons() end, mode = { 'n', 'x' }, desc = '拼写检查' },
+				{ '<localleader>n', function() Snacks.picker.notifications() end, desc = '通知' },
+				{ '<localleader>u', function() Snacks.picker.spelling() end, mode = { 'n', 'x' }, desc = '拼写检查' },
+				{ '<localleader>/', function() Snacks.picker.search_history() end, mode = { 'n', 'x' }, desc = '搜索历史' },
+				{ '<leader>gF', function() Snacks.picker.files({ pattern = vim.fn.expand('<cword>') }) end, desc = '查找文件' },
 				{
 					'<localleader>z',
 					mode = { 'n', 'x' },
@@ -232,7 +232,7 @@ return {
 		't9md/vim-quickhl',
 		-- stylua: ignore
 		keys = {
-			{ '<leader>mt', '<Plug>(quickhl-manual-this)', mode = { 'n', 'x' }, desc = 'Highlight word' },
+			{ '<leader>mt', '<Plug>(quickhl-manual-this)', mode = { 'n', 'x' }, desc = '高亮单词' },
 		},
 	},
 }

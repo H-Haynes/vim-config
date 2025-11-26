@@ -15,15 +15,15 @@ return {
 		cond = has_git,
 		-- stylua: ignore
 		keys = {
-				{ ']g', ']h', desc = 'Next Hunk', remap = true },
-				{ '[g', '[h', desc = 'Previous Hunk', remap = true },
-				{ 'gs',           function() package.loaded.gitsigns.preview_hunk() end, desc = 'Preview hunk' },
-				{ '<leader>ghtb', function() package.loaded.gitsigns.toggle_current_line_blame() end, desc = 'Toggle Git line blame' },
-				{ '<leader>ghtd', function() package.loaded.gitsigns.toggle_deleted() end, desc = 'Toggle Git deleted' },
-				{ '<leader>ghtw', function() package.loaded.gitsigns.toggle_word_diff() end, desc = 'Toggle Git word diff' },
-				{ '<leader>ghtl', function() package.loaded.gitsigns.toggle_linehl() end, desc = 'Toggle Git line highlight' },
-				{ '<leader>ghtn', function() package.loaded.gitsigns.toggle_numhl() end, desc = 'Toggle Git number highlight' },
-				{ '<leader>ghts', function() package.loaded.gitsigns.toggle_signs() end, desc = 'Toggle Git signs' },
+				{ ']g', ']h', desc = '下一个代码块', remap = true },
+				{ '[g', '[h', desc = '上一个代码块', remap = true },
+				{ 'gs',           function() package.loaded.gitsigns.preview_hunk() end, desc = '预览代码块' },
+				{ '<leader>ghtb', function() package.loaded.gitsigns.toggle_current_line_blame() end, desc = '切换 Git 行注释' },
+				{ '<leader>ghtd', function() package.loaded.gitsigns.toggle_deleted() end, desc = '切换 Git 删除标记' },
+				{ '<leader>ghtw', function() package.loaded.gitsigns.toggle_word_diff() end, desc = '切换 Git 单词差异' },
+				{ '<leader>ghtl', function() package.loaded.gitsigns.toggle_linehl() end, desc = '切换 Git 行高亮' },
+				{ '<leader>ghtn', function() package.loaded.gitsigns.toggle_numhl() end, desc = '切换 Git 行号高亮' },
+				{ '<leader>ghts', function() package.loaded.gitsigns.toggle_signs() end, desc = '切换 Git 标记' },
 		},
 		-- stylua: ignore
 		opts = {
@@ -50,8 +50,8 @@ return {
 		cond = has_git,
 		cmd = { 'DiffviewOpen', 'DiffviewFileHistory' },
 		keys = {
-			{ '<leader>gD', '<cmd>DiffviewFileHistory %<CR>', desc = 'Diff File' },
-			{ '<leader>gv', '<cmd>DiffviewOpen<CR>', desc = 'Diff View' },
+			{ '<leader>gD', '<cmd>DiffviewFileHistory %<CR>', desc = '文件差异' },
+			{ '<leader>gv', '<cmd>DiffviewOpen<CR>', desc = '差异视图' },
 		},
 		opts = function()
 			local actions = require('diffview.actions')
@@ -127,8 +127,8 @@ return {
 		cmd = 'ToggleBlame',
 		-- stylua: ignore
 		keys = {
-			{ '<leader>gb', '<cmd>BlameToggle virtual<CR>', desc = 'Git blame' },
-			{ '<leader>gB', '<cmd>BlameToggle window<CR>', desc = 'Git blame (window)' },
+			{ '<leader>gb', '<cmd>BlameToggle virtual<CR>', desc = 'Git 注释' },
+			{ '<leader>gB', '<cmd>BlameToggle window<CR>', desc = 'Git 注释（窗口）' },
 		},
 		opts = {
 			date_format = '%Y-%m-%d %H:%M',

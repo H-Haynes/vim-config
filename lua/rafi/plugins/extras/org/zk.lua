@@ -11,13 +11,13 @@ return {
 		cmd = { 'ZkNew', 'ZkNotes', 'ZkTags', 'ZkMatch' },
 		-- stylua: ignore
 		keys = {
-			{ '<leader>zn', "<Cmd>ZkNew { title = vim.fn.input('Title: ') }<CR>", desc = 'Zk New' },
-			{ '<leader>zo', "<Cmd>ZkNotes { sort = { 'modified' } }<CR>", desc = 'Zk Notes' },
-			{ '<leader>zt', '<Cmd>ZkTags<CR>', desc = 'Zk Tags' },
-			{ '<leader>zf', "<Cmd>ZkNotes { sort = { 'modified' }, match = { vim.fn.input('Search: ') } }<CR>", desc = 'Zk Search' },
-			{ '<leader>zg', ":'<,'>ZkMatch<CR>", mode = 'x', desc = 'Zk Match' },
-			{ '<leader>zb', '<Cmd>ZkBacklinks<CR>', desc = 'Zk Backlinks' },
-			{ '<leader>zl', '<Cmd>ZkLinks<CR>', desc = 'Zk Links' },
+			{ '<leader>zn', "<Cmd>ZkNew { title = vim.fn.input('标题: ') }<CR>", desc = 'Zk 新建' },
+			{ '<leader>zo', "<Cmd>ZkNotes { sort = { 'modified' } }<CR>", desc = 'Zk 笔记' },
+			{ '<leader>zt', '<Cmd>ZkTags<CR>', desc = 'Zk 标签' },
+			{ '<leader>zf', "<Cmd>ZkNotes { sort = { 'modified' }, match = { vim.fn.input('搜索: ') } }<CR>", desc = 'Zk 搜索' },
+			{ '<leader>zg', ":'<,'>ZkMatch<CR>', mode = 'x', desc = 'Zk 匹配' },
+			{ '<leader>zb', '<Cmd>ZkBacklinks<CR>', desc = 'Zk 反向链接' },
+			{ '<leader>zl', '<Cmd>ZkLinks<CR>', desc = 'Zk 链接' },
 		},
 		opts = {
 			picker = 'telescope',
@@ -33,7 +33,7 @@ return {
 		'nvim-telescope/telescope.nvim',
 		optional = true,
 		keys = {
-			{ '<localleader>w', '<cmd>ZkNotes<CR>', desc = 'Zk notes' },
+			{ '<localleader>w', '<cmd>ZkNotes<CR>', desc = 'Zk 笔记' },
 		},
 	},
 }
