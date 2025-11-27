@@ -91,7 +91,52 @@ return {
 							vim.api.nvim_win_close(win, false)
 						end
 					end
-					require('persistence').load()
+					-- Wait for Mason to finish any ongoing installations before loading session
+					-- This prevents "Package is already installing" errors
+					local function wait_for_mason(callback, max_wait)
+						max_wait = max_wait or 5000 -- 5 seconds max
+						local start_time = vim.loop.now()
+						local function check()
+							local ok, registry = pcall(require, 'mason-registry')
+							if not ok then
+								-- Mason not loaded yet, proceed
+								callback()
+								return
+							end
+							local has_installing = false
+							for _, package in pairs(registry.get_all_packages()) do
+								if package:is_installing() then
+									has_installing = true
+									break
+								end
+							end
+							if not has_installing or (vim.loop.now() - start_time) > max_wait then
+								-- No packages installing or timeout reached
+								callback()
+							else
+								-- Wait a bit and check again
+								vim.defer_fn(check, 100)
+							end
+						end
+						check()
+					end
+					-- Load session after ensuring Mason is ready
+					wait_for_mason(function()
+						-- Use xpcall to catch errors including those in nested callbacks
+						local function load_session()
+							require('persistence').load()
+						end
+						local function error_handler(err)
+							local err_str = tostring(err)
+							-- Silently ignore Mason "already installing" errors
+							if not err_str:match('already installing') then
+								vim.notify('Failed to load session: ' .. err_str, vim.log.levels.WARN)
+							end
+							-- Return true to prevent error propagation
+							return true
+						end
+						xpcall(load_session, error_handler)
+					end)
 				end,
 			})
 		end,
